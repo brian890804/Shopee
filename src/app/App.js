@@ -1,22 +1,15 @@
 import './App.css';
-
+import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom'
+import PersistMemberStore from './setup/redux/PersistMemberStore'
+import setupAxios from './setup/axios/setupAxios';
+import Routes from './routing/Routes';
 function App() {
+  setupAxios(axios, PersistMemberStore);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
