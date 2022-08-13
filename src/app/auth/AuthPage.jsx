@@ -1,13 +1,14 @@
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch  } from 'react-router-dom'
 export default function AuthPage() {
+    console.log('123')
     return (
         <AuthLayout>
-            <Switch>
+            <Switch >
                 {/* <Route path='/auth/login' component={Login} /> */}
                 {/* <Route path='/auth/registration' component={Registration} /> */}
                 <Redirect from='/auth' exact to='/auth/login' />
                 <Redirect to='/auth/login' />
-            </Switch>
+            </Switch >
         </AuthLayout>
     )
 }

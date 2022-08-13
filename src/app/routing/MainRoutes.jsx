@@ -1,11 +1,11 @@
 import PersistMemberStore from '../setup/redux/PersistMemberStore'
 import AuthPage from '../auth/AuthPage';
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch  } from 'react-router-dom'
 import PrivataRoute from './PrivateRoute';
-export default function Routes() {
+export default function MainSwitch() {
     const { token: Auth } = PersistMemberStore();
     return (
-        <Switch>
+        <Switch >
             {!Auth ? (
                 <Route>
                     <AuthPage />
@@ -21,6 +21,6 @@ export default function Routes() {
             )}
 
 
-        </Switch>
+        </Switch >
     )
 }
